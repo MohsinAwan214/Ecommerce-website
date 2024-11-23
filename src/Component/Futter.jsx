@@ -1,0 +1,119 @@
+import React from "react";
+import { VscSend } from "react-icons/vsc";
+import QrCode from "../assets/images/QrImg.png";
+import GooglePlay from "../assets/images/GooglePlay.png";
+import { FaApple } from "react-icons/fa";
+import { RiFacebookLine } from "react-icons/ri";
+import { PiTwitterLogo } from "react-icons/pi";
+import { IoLogoInstagram } from "react-icons/io5";
+import { RiLinkedinLine } from "react-icons/ri";
+
+export default function Futter() {
+  return (
+    <div className="bg-black text-[#FAFAFA] min-h-[380px] w-full  overflow-hidden p-[70px]">
+      <div className=" flex  w-fll justify-between ml-1  flex-wrap">
+      
+        <div className=" h-[132px] flex flex-col gap-3 w-40 ">
+          <h1 className="font-bold tracking-wider">Exclusive</h1>
+          <span className="text-[12px] tracking-wider font-medium">
+            Subscribe
+          </span>
+          <p className="text-[10px] tracking-wider">
+            Get 10% off your first order
+          </p>
+
+          <div className="h-9 w-36 border-[#FAFAFA] border-[1px] rounded flex items-center  text-white">
+            <input
+              type="search"
+              placeholder="Enter your email"
+              className="bg-transparent w-28 p-2 outline-none text-[12px] "
+            />
+            <button className="text-[18px]">
+              <VscSend />
+            </button>
+          </div>
+        </div>
+
+        {/* 2 */}
+
+        <div className=" h-[132px] flex flex-col gap-3 w-36 ">
+          <h1 className="font-semibold tracking-wider ">Support</h1>
+          <div className="h-[110px]  text-[12px] gap-2 flex flex-col">
+            <span className="tracking-wider ">
+              111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.
+            </span>
+            <p className="text-[13px] tracking-wider ">exclusive@gmail.com</p>
+            <p className=" tracking-wider">+88015-88888-9999</p>
+          </div>
+        </div>
+
+        {/* 3 */}
+
+        <div className=" h-[158px] flex flex-col gap-3 w-26  ">
+          <h1 className="font-bold tracking-wider">Account</h1>
+          <div className="flex flex-col gap-2 text-[12px]">
+            <span className=" tracking-wider font-medium">My Account</span>
+            <span className=" tracking-wider">Login / Register</span>
+            <span className=" tracking-wider">Cart</span>
+            <span className=" tracking-wider">Wishlist</span>
+            <span className=" tracking-wider">Shop</span>
+          </div>
+        </div>
+
+        {/* 4 */}
+
+        <div className=" h-[136px] flex flex-col gap-2 w-26  ">
+          <h1 className="font-bold tracking-wider">Quick Link</h1>
+          <span className="text-[12px] tracking-wider font-medium">
+            Privacy Policy
+          </span>
+          <span className="text-[10px] tracking-wider">Terms Of Use</span>
+          <span className="text-[10px] tracking-wider">FAQ</span>
+          <span className="text-[10px] tracking-wider">Contact</span>
+        </div>
+
+        <div className=" h-[180px] flex flex-col gap-2 w-26 ">
+          <h1 className="font-bold tracking-wider">Download App</h1>
+          <span className="text-[9px] tracking-wider font-medium text-[#FAFAFA] opacity-70">
+            Save $3 with App New User Only
+          </span>
+
+          <div className="flex">
+            
+            
+          
+            <img src={QrCode} alt="qr code img" className="h-[54px] mt-[5px]"/>
+          
+            <div className=" ">
+              <div className="">
+              <img src={GooglePlay} className="h-[30px]" alt="play store img" />
+              </div>
+              <div className="flex rounded-[5px] py-[2px] w-[79px] ml-[3px]  border-[0.5px]">
+                <FaApple className="text-[20px] "/>
+                <div className=" ">
+                  <div className="text-[6px] tracking-wider">Download on the</div>
+                  <div className="font-bold tracking-wider text-[10px] leading-3">App Store</div>
+                </div>
+              </div>
+            </div>
+          </div>
+<div className="w-28 h-6 flex justify-between text-[15px] gap-5">
+  <div>
+<RiFacebookLine/>
+  </div>
+  <div>
+<PiTwitterLogo/>
+  </div>
+  <div>
+<IoLogoInstagram/>
+  </div>
+  <div>
+<RiLinkedinLine/>
+  </div>
+</div>
+        </div>
+
+      </div>
+    </div>
+  );
+}

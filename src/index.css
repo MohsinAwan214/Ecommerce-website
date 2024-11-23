@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    /* font-family: Popoins; */
+    /* font-family: inter; */
+    --primary:#db4444;
+}
+.margin{
+    margin-right:auto;
+    margin-left:auto;
+    max-width: 880px;
+    
+}
+.bdr{
+    border:1px solid black;
+}
+
+.price{
+    color: #DB4444;
+
+}
+
+.box{
+    border: 8px solid #2F2E30;
+   
+}
+
+.del{
+    color:#000000;
+    opacity: 50%;
+}
+.discount{
+    color: #FAFAFA;
+    background-color: #DB4444;
+    
+}
+
+.bgGreen{
+    color: #FAFAFA;
+    background-color: #00FF66;
+
+}
+
+.whiteSmoke{
+    background-color: whitesmoke;
+    
+}
+.lead{
+    color: #000000;
+    opacity: 50%;
+    
+}
+
