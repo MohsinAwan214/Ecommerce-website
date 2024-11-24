@@ -31,12 +31,12 @@ import Jacket from '../assets/images/Jacket.png';
 import "../index.css";
 import Music from "../Component/Music";
 import Delivery from "../Component/Delivery";
-
+import { FaArrowUp } from "react-icons/fa6";
 
 export default function Home() {
   return (
     <>
-        <div>
+        <div id="top">
           <Vouchor />
         </div>
       <div className="margin  overflow-hidden ">
@@ -48,7 +48,7 @@ export default function Home() {
             <Arrow />
           </div>
           <div className="flex gap-7 mt-10">
-            <Card image={gamepadimage} className="discount " text="-40%" Name="HAVIT HV-G92 Gamepad" Fix="$120" Sale="$160" Rate="88" className1="hidden"/>
+            <Card image={gamepadimage} className="discount " text="-40%" Name="HAVIT HV-G92 Gamepad" Fix="" Sale="$160" Rate="88" className1="hidden"/>
             <Card image={Keybord} className="discount bg-black" text="-40%" Name="AK-900 Wired Keyboard" Fix="$960" Sale="$960" Rate="75" className1="text-white pt-[4px] text-sm  h-[30px] w-[198px]  top-[158px] bg-black"/>
             <Card image={Lcd} className="discount " text="-40%" Name="IPS LCD Gaming Monitor" Fix="$370" Sale="$400" Rate="99"  className1="hidden"/>
             <Card image={Chear} className="discount " text="-40%" Name="S-Series Comfort Chair " Fix="$375" Sale="$400" Rate="99" className1="hidden"/>
@@ -142,6 +142,9 @@ export default function Home() {
 
         <div className="mt-36 flex justify-center">
           <Delivery />
+        </div>
+        <div className="mb-10 bg-[#F5F5F5] flex float-end h-10 w-10 rounded-full bg-center text-2xl">
+          <a id="top" href=""><FaArrowUp/></a>
         </div>
 
         

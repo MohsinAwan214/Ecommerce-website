@@ -7,10 +7,11 @@ import { RiFacebookLine } from "react-icons/ri";
 import { PiTwitterLogo } from "react-icons/pi";
 import { IoLogoInstagram } from "react-icons/io5";
 import { RiLinkedinLine } from "react-icons/ri";
+import { PiCopyrightLight } from "react-icons/pi";
 
 export default function Futter() {
   return (
-    <div className="bg-black text-[#FAFAFA] min-h-[380px] w-full  overflow-hidden p-[70px]">
+    <div className="bg-black text-[#FAFAFA] min-h-[350px] w-full relative  overflow-hidden p-[70px]">
       <div className=" flex  w-fll justify-between ml-1  flex-wrap">
       
         <div className=" h-[132px] flex flex-col gap-3 w-40 ">
@@ -97,7 +98,7 @@ export default function Futter() {
               </div>
             </div>
           </div>
-<div className="w-28 h-6 flex justify-between text-[15px] gap-5">
+<div className="w-28 h-6 flex justify-between text-[17px] gap-4 mt-3">
   <div>
 <RiFacebookLine/>
   </div>
@@ -114,6 +115,15 @@ export default function Futter() {
         </div>
 
       </div>
+      <div
+       className=" bottom-5 left-[350px] absolute flex gap-1 text-[#FFFFFF] ">
+        <div className="pt-1 opacity-30">
+        <PiCopyrightLight/>
+        </div>
+        <span className="opacity-20">
+        Copyright Rimel 2022. All right reserved
+        </span>
+        </div>
     </div>
   );
 }

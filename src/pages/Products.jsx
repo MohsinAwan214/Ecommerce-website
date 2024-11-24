@@ -16,6 +16,8 @@ export default function Products(props) {
   
 }
 
+
+
 console.log(products);
 
 useEffect(()=>{
@@ -39,7 +41,7 @@ return (
 
   
 
-<div className="flex flex-wrap gap-5 bdr">
+<div className="flex flex-wrap gap-5 ">
 <input type="search" name="price" id="price"
 
 className=""

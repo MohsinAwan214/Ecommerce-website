@@ -13,7 +13,7 @@ const links = [
   { title: "Home", link: "/" },
   { title: "About", link: "about" },
   { title: "Contact us", link: "Contact" },
-  { title: "Products", link: "Products" },
+ 
 ];
 
 export default function Header() {

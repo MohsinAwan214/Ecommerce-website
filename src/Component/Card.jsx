@@ -11,7 +11,7 @@ export default function Card(props) {
   
   return (
     <>
-    <div className='card h-[300px] w-[210px]  bg-center  flex-col justify-between  truncate relative'>
+    <div className=' card h-[300px] w-[210px]  bg-center  flex-col justify-between  truncate relative'>
      <div className='whiteSmoke rounded h-[190px]  w-[200px] relative flex justify-center items-center '>
       <div className={`absolute ${props.className1} text-center`}>Add To Cart</div>
       <img className='h-[60px] absolute right-2 top-2' src={socalIcon} alt="" />         
@@ -23,7 +23,7 @@ export default function Card(props) {
 <div className='h-[84px] w-[201px]  mt-4  '>
 <h1 className=' font-medium text-sm leading-6 h-6 w-[201px]'>{props.Name}</h1>
 <p className='pt-1 h-6 w-[85px]' >
-  <span className='price mr-3 font-medium text-sm	'>{discountPrice}</span>
+  <span className='price mr-3 font-medium text-sm	'>{discountPrice}{props.pr}</span>
   <del>
   <span className='del font-medium text-sm'>{props.Sale}</span>
   </del>
