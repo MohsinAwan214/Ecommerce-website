@@ -47,7 +47,7 @@ export default function Home() {
             <Hero />
             <Arrow />
           </div>
-          <div className="flex gap-7 mt-10">
+          <div className="flex gap-7 mt-10 var">
             <Card image={gamepadimage} className="discount " text="-40%" Name="HAVIT HV-G92 Gamepad" Fix="" Sale="$160" Rate="88" className1="hidden"/>
             <Card image={Keybord} className="discount bg-black" text="-40%" Name="AK-900 Wired Keyboard" Fix="$960" Sale="$960" Rate="75" className1="text-white pt-[4px] text-sm  h-[30px] w-[198px]  top-[158px] bg-black"/>
             <Card image={Lcd} className="discount " text="-40%" Name="IPS LCD Gaming Monitor" Fix="$370" Sale="$400" Rate="99"  className1="hidden"/>
@@ -87,7 +87,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex gap-7 mt-10">
+          <div className="flex gap-7 mt-10 var">
             <Card image={GirlJacket} className="hidden" Name="The north coat" Fix="$260" Sale="$360" Rate="65" className1="hidden"/>
             <Card image={Purse} className="hidden" Name="Gucci duffle bag" Fix="$960" Sale="$1160" Rate="65" className1="hidden"/>
             <Card image={GameSpeaker} className="hidden" Name="RGB liquid CPU Cooler" Fix="$160" Sale="$170" Rate="65" className1="hidden"/>
@@ -107,13 +107,13 @@ export default function Home() {
             </h1>
             <Arrow />
           </div>
-          <div className="flex gap-7 mt-10">
+          <div className="flex gap-7 mt-10 var">
             <Card image={Dog} className="hidden" Name="Breed Dry Dog Food" Fix="$100" Rate="35" className1="hidden"/>
             <Card image={Camera }className="hidden" Name="CANON EOS DSLR Camera" Fix="$360" Rate="95" className1="text-white  h-[30px] w-[198px] pt-[4px] text-sm top-[158px] bg-black"/>
             <Card image={Laptop} className="hidden" Name="ASUS FHD Gaming Laptop" Fix="$700" Rate="325" className1="hidden"/> 
             <Card image={Feshel} className="hidden" Name="Curology Product Set " Fix="$500" Rate="145" className1="hidden"/>
           </div>
-          <div className="flex gap-7 mt-10">
+          <div className="flex gap-7 mt-10 var">
             <Card image={Car} className="bgGreen "  text='New' Name="Kids Electric Car" Fix="$960" Rate="65" className1="hidden"/>
             <Card image={Shose} className="hidden" Name="Jr. Zoom Soccer Cleats" Fix="$1160" Rate="35" className1="hidden"/>
             <Card image={BlackGamePad} className="bgGreen" text='New' Name="Jr. Zoom Soccer Cleats" Fix="$660" Rate="55" className1="hidden"/>

@@ -25,7 +25,7 @@ getProductData();
 },[])
 
 const [searchterm, setSearchTerm] = useState("")
-console.log(searchterm);
+
 
 const searchProduct = ()=>{
  const result = products?.filter((item)=>{
@@ -38,29 +38,29 @@ const searchProduct = ()=>{
 const searchResult = searchProduct()
 
 return (
-
+<>
   
 
 <div className="flex flex-wrap gap-5 ">
+
 <input type="search" name="price" id="price"
 
 className=""
 onChange={(event)=>{
   // console.log(event.target.value)
   setSearchTerm(event.target.value)
-
+  
 }}
 placeholder="Search Your Product"
 
 />
 
-
     {searchResult?.map((item)=>(
       <Card key={item.id}
       Name={item.title} 
- image={item.thumbnail} 
- className1="hidden" 
- Fix={item.discountPercentage}
+      image={item.thumbnail} 
+      className1="hidden" 
+      Fix={item.discountPercentage}
  Sale={item.price} 
  rating={item.rating}
  />
@@ -68,5 +68,6 @@ placeholder="Search Your Product"
 </div>
     
 
+      </>
   )
 }

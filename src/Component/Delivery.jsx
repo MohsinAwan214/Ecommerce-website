@@ -3,7 +3,7 @@ import { SlEarphonesAlt } from "react-icons/sl";
 import { MdOutlineVerifiedUser } from "react-icons/md";
 export default function Delivery() {
   return (
-    <div className='flex justify-between mb-28  w-[760px]'>
+    <div className='flex justify-between mb-28  w-[760px] delievery'>
         <div className='h-38 w-56 bg-center flex-col'>
             <div className='h-14 w-14 border-[8px] border-[#2F2E30] border-opacity-40  rounded-full bg-center'>
             <div className='h-10 w-10 text-2xl bg-black  text-white bg-center rounded-full'>

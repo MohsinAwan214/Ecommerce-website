@@ -11,15 +11,15 @@ export default function vouchor() {
 <div className="flex  w-full margin">
 <div className="border-r-[1px]  h-[300px] w-52">
        <ul className=" text-sm font-normal h-62 mt-8">
-            <li className="py-3 h-[30px] w-32  flex items-center ">Woman’s Fashion </li>
-            <li className="py-3 h-[30px] w-32  flex items-center ">Men’s Fashion </li>
-            <li className="py-3 h-[30px] w-32  flex items-center">Electronics</li>
-            <li className="py-3 h-[30px] w-32  flex items-center">Home & Lifestyle</li>
-            <li className="py-3 h-[30px] w-32  flex items-center">Medicine</li>
-            <li className="py-3 h-[30px] w-32  flex items-center">Sports & Outdoor</li>
-            <li className="py-3 h-[30px] w-32  flex items-center">Baby’s & Toys</li>
-            <li className="py-3 h-[30px] w-32  flex items-center">Groceries & Pets</li>
-            <li className="py-3 h-[30px] w-32  flex items-center ">Health & Beauty</li>
+            <li className="py-3 h-[30px] w-32  flex items-center  group  hover:cursor-pointer hover:text-[#db4444]"><div className="S_Underline relative inline-block after:bg-[#db4444] group-hover:after:left-0 after:-bottom-1 w-fit group-hover:after:w-[100%] ">Woman’s Fashion </div></li>
+            <li className="py-3 h-[30px] w-32  flex items-center  group  hover:cursor-pointer hover:text-[#db4444]"><div className="S_Underline relative inline-block after:bg-[#db4444] group-hover:after:left-0 after:-bottom-1 w-fit group-hover:after:w-[100%] ">Men’s Fashion </div></li>
+            <li className="py-3 h-[30px] w-32  flex items-center group  hover:cursor-pointer hover:text-[#db4444]"><div className="S_Underline relative inline-block after:bg-[#db4444] group-hover:after:left-0 after:-bottom-1 w-fit group-hover:after:w-[100%] ">Electronics</div></li>
+            <li className="py-3 h-[30px] w-32  flex items-center group  hover:cursor-pointer hover:text-[#db4444]"><div className="S_Underline relative inline-block after:bg-[#db4444] group-hover:after:left-0 after:-bottom-1 w-fit group-hover:after:w-[100%] ">Home & Lifestyle</div></li>
+            <li className="py-3 h-[30px] w-32  flex items-center group  hover:cursor-pointer hover:text-[#db4444]"><div className="S_Underline relative inline-block after:bg-[#db4444] group-hover:after:left-0 after:-bottom-1 w-fit group-hover:after:w-[100%] ">Medicine</div></li>
+            <li className="py-3 h-[30px] w-32  flex items-center group  hover:cursor-pointer hover:text-[#db4444]"><div className="S_Underline relative inline-block after:bg-[#db4444] group-hover:after:left-0 after:-bottom-1 w-fit group-hover:after:w-[100%] ">Sports & Outdoor</div></li>
+            <li className="py-3 h-[30px] w-32  flex items-center group  hover:cursor-pointer hover:text-[#db4444]"><div className="S_Underline relative inline-block after:bg-[#db4444] group-hover:after:left-0 after:-bottom-1 w-fit group-hover:after:w-[100%] ">Baby’s & Toys</div></li>
+            <li className="py-3 h-[30px] w-32  flex items-center group  hover:cursor-pointer hover:text-[#db4444]"><div className="S_Underline relative inline-block after:bg-[#db4444] group-hover:after:left-0 after:-bottom-1 w-fit group-hover:after:w-[100%] ">Groceries & Pets</div></li>
+            <li className="py-3 h-[30px] w-32  flex items-center  group  hover:cursor-pointer hover:text-[#db4444]"><div className="S_Underline relative inline-block after:bg-[#db4444] group-hover:after:left-0 after:-bottom-1 w-fit group-hover:after:w-[100%] ">Health & Beauty</div></li>
         </ul>
 
 </div>

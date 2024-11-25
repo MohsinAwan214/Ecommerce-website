@@ -21,7 +21,7 @@ export default function Header() {
 
   const isLogin = false;
   const navLinks =
-    "capitalize hover:underline hover:cursor-pointer hover:text-[#db4444]";
+    "capitalize S_Underline relative inline-block after:bg-[#db4444] hover:text-[#db4444] hover:after:left-0 after:-bottom-1 w-fit hover:after:w-[100%]";
 
   return (
     <>

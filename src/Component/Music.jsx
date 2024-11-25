@@ -5,7 +5,7 @@ import Radio from "../assets/images/Radio.png"
 export default function Music() {
   return (
     <div className="bg-[#000000] h-[400px] text-white flex ">
-<div className="ml-12 h-full  w-80 py-12 flex flex-col justify-between">
+<div className="ml-12 h-full  w-80 py-12 flex flex-col justify-between ">
   <div className="text-[#00FF66] leading-5">Categories</div>
   <div className=" text-4xl w-72">Enhance Your Music Experience</div>
   <div className='flex text-black gap-5'>

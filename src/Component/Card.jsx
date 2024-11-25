@@ -11,13 +11,13 @@ export default function Card(props) {
   
   return (
     <>
-    <div className=' card h-[300px] w-[210px]  bg-center  flex-col justify-between  truncate relative'>
+    <div className='card h-[300px] w-[210px]  bg-center group flex-col justify-between  truncate relative'>
      <div className='whiteSmoke rounded h-[190px]  w-[200px] relative flex justify-center items-center '>
       <div className={`absolute ${props.className1} text-center`}>Add To Cart</div>
       <img className='h-[60px] absolute right-2 top-2' src={socalIcon} alt="" />         
       <div className={`rounded h-[22px] w-[47px]  flex justify-center items-center absolute left-3 top-3 text-[12px] ${props.className}`}>{props.text}</div>   
       <div className={`bg-center  h-[120px] w-[120px] ${props.hight}`}>
-      <img className='' src={props.image} alt="" />
+      <img className='group-hover:scale-110 duration-300' src={props.image} alt=""  />
       </div>
     </div>
 <div className='h-[84px] w-[201px]  mt-4  '>
