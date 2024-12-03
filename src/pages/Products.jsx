@@ -1,29 +1,12 @@
-import axios from "axios"
-import { useEffect, useState } from "react";
+
+import { useState } from "react";
 import Card from "../Component/Card";
+import useProduct from "../hooks/useProduct";
 import '../index.css'
 
 export default function Products(props) {
-    
-
-
-    const [products, setProducts] = useState(null)
-    const  api_Product = "https://dummyjson.com/products"
-    
-    const getProductData = async ()=>{
-  const response = await axios(api_Product)
-  setProducts(response?.data?.products)
   
-}
-
-
-
-console.log(products);
-
-useEffect(()=>{
-getProductData();
-},[])
-
+ const {products} = useProduct('limit=30&skip=0')
 const [searchterm, setSearchTerm] = useState("")
 
 
@@ -38,14 +21,15 @@ const searchProduct = ()=>{
 const searchResult = searchProduct()
 
 return (
-<>
+  <>
   
 
-<div className="flex flex-wrap gap-5 ">
+<div className="flex flex-wrap margin bg-center">
+
 
 <input type="search" name="price" id="price"
 
-className=""
+className="border my-5 w-full bdr py-4 pl-4 pr-12 text-base h-14 block"
 onChange={(event)=>{
   // console.log(event.target.value)
   setSearchTerm(event.target.value)
@@ -54,20 +38,26 @@ onChange={(event)=>{
 placeholder="Search Your Product"
 
 />
-
+{products === null ? "Loding....." : null}
+  <div className="flex flex-wrap  gap-[22px] bg-center">
     {searchResult?.map((item)=>(
       <Card key={item.id}
       Name={item.title} 
       image={item.thumbnail} 
       className1="hidden" 
-      Fix={item.discountPercentage}
- Sale={item.price} 
+      discountPercentage={item.discountPercentage}
+    
+price={item.price} 
  rating={item.rating}
  />
 ))}
+
+
+</div>
 </div>
     
 
       </>
-  )
+      
+    )
 }

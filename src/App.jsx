@@ -1,6 +1,7 @@
 import Banner from "../src/Component/Banner"
 import Header from "../src/Component/Header"
 import Futter from "../src/Component/Futter"
+
 import "./index.css";
 import { Routes, Route, Outlet, Link, Navigate } from "react-router-dom"
 
@@ -15,7 +16,9 @@ const isLogined = false;
 
   return (
     <>
-    
+
+
+
       <Banner/>
       <Header/>
       <Routes>
@@ -23,19 +26,20 @@ const isLogined = false;
         <Route path="/About" index element={<About/>} />
         <Route path="/products" index element={<Products/>} />
 {isLogined ? ( 
-<>
+  <>
 <Route path="/profile" element={<div>My profile page</div>} />
 
 <Route path="/login" element={<Navigate to="/" replace={true}/>} /> 
 </>
          ):(
-          <>
+           <>
         <Route path="/Login" element={<Login/>} /> 
         <Route path="*" element={<Navigate to="/login" replace={true}/>} /> 
           </>
         )}
 
             </Routes>
+        
             <Futter />
     </>
   )

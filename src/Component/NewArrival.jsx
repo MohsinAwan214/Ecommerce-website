@@ -18,7 +18,7 @@ export default function NewArrival() {
 
   
 <div className="bg-[#0D0D0D] rounded col-span-2  bg-center relative group overflow-hidden">
-  <img src={baji} alt="" className="h-full w-full right-0 bg-transparent border absolute group-hover:scale-110 duration-300"/>
+  <img src={baji} alt="" className="h-full right-0 absolute group-hover:scale-110 duration-300"/>
   <div className="absolute gap-3 bottom-5 left-5 flex-col flex">
     <h1 className="S_Underline relative inline-block after:bg-white group-hover:after:left-0 after:-bottom-1 w-fit group-hover:after:w-[100%] font-semibold text-[#FAFAFA] text-2xl">Women’s Collections</h1>
     <p className="text-[#FAFAFA] text-[14px] font-normal w-56">Featured woman collections that give you another vibe.</p>

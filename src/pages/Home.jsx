@@ -7,10 +7,7 @@ import Arrow from "../Component/Arrow";
 import Categories from "../Component/Categories";
 import NewArrival from "../Component/NewArrival";
 
-import gamepadimage from '../assets/images/game.png';
-import Keybord from '../assets/images/Keybord.png';
-import Lcd from '../assets/images/Lcd.png';
-import Chear from '../assets/images/Chear.png';
+
 import GirlJacket from '../assets/images/GirlJacket.png';
 import Purse from '../assets/images/Purse.png';
 import GameSpeaker from '../assets/images/GameSpeaker.png';
@@ -32,14 +29,17 @@ import "../index.css";
 import Music from "../Component/Music";
 import Delivery from "../Component/Delivery";
 import { FaArrowUp } from "react-icons/fa6";
+import Slider from "../Component/Slider";
+import useProduct from "../hooks/useProduct";
 
 export default function Home() {
+  const {products} = useProduct("limit=30&skip=80")
   return (
     <>
         <div id="top">
           <Vouchor />
         </div>
-      <div className="margin  overflow-hidden ">
+      <div className="overflow-hidden  margin">
 
         <div className="mt-20">
           <Title text="Today’s" className="mb-1" />
@@ -47,12 +47,10 @@ export default function Home() {
             <Hero />
             <Arrow />
           </div>
-          <div className="flex gap-7 mt-10 var">
-            <Card image={gamepadimage} className="discount " text="-40%" Name="HAVIT HV-G92 Gamepad" Fix="" Sale="$160" Rate="88" className1="hidden"/>
-            <Card image={Keybord} className="discount bg-black" text="-40%" Name="AK-900 Wired Keyboard" Fix="$960" Sale="$960" Rate="75" className1="text-white pt-[4px] text-sm  h-[30px] w-[198px]  top-[158px] bg-black"/>
-            <Card image={Lcd} className="discount " text="-40%" Name="IPS LCD Gaming Monitor" Fix="$370" Sale="$400" Rate="99"  className1="hidden"/>
-            <Card image={Chear} className="discount " text="-40%" Name="S-Series Comfort Chair " Fix="$375" Sale="$400" Rate="99" className1="hidden"/>
-          </div>
+
+         
+          <Slider />
+           
         </div>
 
         <div className="border-b-[2px]  flex justify-center  pb-14">
@@ -87,11 +85,20 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex gap-7 mt-10 var">
-            <Card image={GirlJacket} className="hidden" Name="The north coat" Fix="$260" Sale="$360" Rate="65" className1="hidden"/>
-            <Card image={Purse} className="hidden" Name="Gucci duffle bag" Fix="$960" Sale="$1160" Rate="65" className1="hidden"/>
-            <Card image={GameSpeaker} className="hidden" Name="RGB liquid CPU Cooler" Fix="$160" Sale="$170" Rate="65" className1="hidden"/>
-            <Card image={BookTable} className="hidden" Name="Small BookSelf" Fix="$160" Rate="65" className1="hidden"/>
+          <div className="flex gap-7 mt-10 var bdr">
+          {products?.slice(0,4).map((item)=>(
+ 
+            <Card
+            key={item.id}
+            Name={item.title} 
+            image={item.thumbnail} 
+            className1="hidden" 
+            discountPercentage={item.discountPercentage}
+            price={item.price} 
+            rating={item.rating}
+            
+            />
+          ))}
           </div>
         </div>
 
@@ -107,17 +114,35 @@ export default function Home() {
             </h1>
             <Arrow />
           </div>
-          <div className="flex gap-7 mt-10 var">
-            <Card image={Dog} className="hidden" Name="Breed Dry Dog Food" Fix="$100" Rate="35" className1="hidden"/>
-            <Card image={Camera }className="hidden" Name="CANON EOS DSLR Camera" Fix="$360" Rate="95" className1="text-white  h-[30px] w-[198px] pt-[4px] text-sm top-[158px] bg-black"/>
-            <Card image={Laptop} className="hidden" Name="ASUS FHD Gaming Laptop" Fix="$700" Rate="325" className1="hidden"/> 
-            <Card image={Feshel} className="hidden" Name="Curology Product Set " Fix="$500" Rate="145" className1="hidden"/>
+          <div className="flex gap-7 mt-10 var bdr">
+          {products?.slice(4,8).map((item)=>(
+ 
+            <Card
+            key={item.id}
+            Name={item.title} 
+            image={item.thumbnail} 
+            className1="hidden" 
+            discountPercentage={item.discountPercentage}
+            price={item.price} 
+            rating={item.rating}
+            
+            />
+          ))}
           </div>
-          <div className="flex gap-7 mt-10 var">
-            <Card image={Car} className="bgGreen "  text='New' Name="Kids Electric Car" Fix="$960" Rate="65" className1="hidden"/>
-            <Card image={Shose} className="hidden" Name="Jr. Zoom Soccer Cleats" Fix="$1160" Rate="35" className1="hidden"/>
-            <Card image={BlackGamePad} className="bgGreen" text='New' Name="Jr. Zoom Soccer Cleats" Fix="$660" Rate="55" className1="hidden"/>
-            <Card image={Jacket} className="hidden" Name="Quilted Satin Jacket" Fix="$660" Rate="55" className1="hidden"/>
+          <div className="flex gap-7 mt-10 var bdr">
+          {products?.slice(8,12).map((item)=>(
+ 
+            <Card
+            key={item.id}
+            Name={item.title} 
+            image={item.thumbnail} 
+            className1="hidden" 
+            discountPercentage={item.discountPercentage}
+            price={item.price} 
+            rating={item.rating}
+            
+            />
+          ))}
           </div>
           <div className="mt-10">
             <Button

@@ -8,13 +8,14 @@
     align-items: center;
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 733px){
 
 .var{
     flex-wrap: wrap;
     justify-content: center;
     
 }
+
 
 .newarival{
     grid-row: auto;
@@ -24,6 +25,24 @@
     justify-content: center;
     gap: 50px;
 }
+.voucher2{
+display: none;
+}
+
+.voucher1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.voucher3{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 }
 
 .S_Underline:after {
