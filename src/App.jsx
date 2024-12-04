@@ -10,6 +10,7 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Products from "./pages/Products"
 import Login from "./pages/Login"
+import ProductDatail from "./pages/ProductDatail";
 {/* //         <Route path="/Contact" element={<Contact/>} /> */}
 function App() {
 const isLogined = false;  
@@ -25,6 +26,7 @@ const isLogined = false;
         <Route path="/" index element={<Home/>} />
         <Route path="/About" index element={<About/>} />
         <Route path="/products" index element={<Products/>} />
+        <Route path="/product/:id" index element={<ProductDatail/>} />
 {isLogined ? ( 
   <>
 <Route path="/profile" element={<div>My profile page</div>} />

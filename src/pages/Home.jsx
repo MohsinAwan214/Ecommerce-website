@@ -8,23 +8,6 @@ import Categories from "../Component/Categories";
 import NewArrival from "../Component/NewArrival";
 
 
-import GirlJacket from '../assets/images/GirlJacket.png';
-import Purse from '../assets/images/Purse.png';
-import GameSpeaker from '../assets/images/GameSpeaker.png';
-import BookTable from '../assets/images/BookTable.png';
-
-
-import Dog from '../assets/images/Dog.png';
-import Camera from '../assets/images/Camera.png';
-import Laptop from '../assets/images/Laptop.png';
-import Feshel from '../assets/images/Feshel.png';
-import Car from '../assets/images/Car.png';
-import Shose from '../assets/images/Shose.png';
-import BlackGamePad from '../assets/images/BlackGamePad.png';
-import Jacket from '../assets/images/Jacket.png';
-
-
-
 import "../index.css";
 import Music from "../Component/Music";
 import Delivery from "../Component/Delivery";
@@ -85,7 +68,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex gap-7 mt-10 var bdr">
+          <div className="flex gap-7 mt-10 var ">
           {products?.slice(0,4).map((item)=>(
  
             <Card
@@ -114,11 +97,12 @@ export default function Home() {
             </h1>
             <Arrow />
           </div>
-          <div className="flex gap-7 mt-10 var bdr">
+          <div className="flex gap-7 mt-10 var">
           {products?.slice(4,8).map((item)=>(
  
             <Card
             key={item.id}
+            id={item.id}
             Name={item.title} 
             image={item.thumbnail} 
             className1="hidden" 
@@ -129,11 +113,12 @@ export default function Home() {
             />
           ))}
           </div>
-          <div className="flex gap-7 mt-10 var bdr">
+          <div className="flex gap-7 mt-10 var ">
           {products?.slice(8,12).map((item)=>(
  
             <Card
             key={item.id}
+            id={item.id}
             Name={item.title} 
             image={item.thumbnail} 
             className1="hidden" 

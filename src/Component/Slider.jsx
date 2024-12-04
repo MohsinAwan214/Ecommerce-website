@@ -39,6 +39,7 @@ const {products} = useProduct('limit=10&skip=30')
       <SwiperSlide>
             <Card
             key={item.id}
+            id={item.id}
             Name={item.title} 
             image={item.thumbnail} 
             className1="hidden" 

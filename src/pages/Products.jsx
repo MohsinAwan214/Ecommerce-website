@@ -42,6 +42,7 @@ placeholder="Search Your Product"
   <div className="flex flex-wrap  gap-[22px] bg-center">
     {searchResult?.map((item)=>(
       <Card key={item.id}
+      id={item.id}
       Name={item.title} 
       image={item.thumbnail} 
       className1="hidden" 
