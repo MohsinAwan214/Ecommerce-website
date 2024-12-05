@@ -5,12 +5,12 @@ import { FaArrowRight } from "react-icons/fa";
 
 
 
-export default function vouchor() {
+export default function vouchor({darkMode}) {
   return (
     <>
 <div className="flex  w-full margin voucher1">
 <div className="border-r-[1px]  h-[300px] w-52 voucher3 ">
-       <ul className=" text-sm font-normal h-62 mt-8">
+       <ul className={`text-sm font-normal h-62 mt-8 ${darkMode ? "text-white" : ""}`}>
             <li className="py-3 h-[30px] w-32  flex items-center  group  hover:cursor-pointer hover:text-[#db4444]"><div className="S_Underline relative inline-block after:bg-[#db4444] group-hover:after:left-0 after:-bottom-1 w-fit group-hover:after:w-[100%] ">Woman’s Fashion </div></li>
             <li className="py-3 h-[30px] w-32  flex items-center  group  hover:cursor-pointer hover:text-[#db4444]"><div className="S_Underline relative inline-block after:bg-[#db4444] group-hover:after:left-0 after:-bottom-1 w-fit group-hover:after:w-[100%] ">Men’s Fashion </div></li>
             <li className="py-3 h-[30px] w-32  flex items-center group  hover:cursor-pointer hover:text-[#db4444]"><div className="S_Underline relative inline-block after:bg-[#db4444] group-hover:after:left-0 after:-bottom-1 w-fit group-hover:after:w-[100%] ">Electronics</div></li>

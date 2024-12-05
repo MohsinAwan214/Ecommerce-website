@@ -8,24 +8,25 @@ import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import  "../index.css"
+import { IoSunnyOutline } from "react-icons/io5";
+import { BsFillMoonFill } from "react-icons/bs";
 
 const links = [
   { title: "Home", link: "/" },
   { title: "About", link: "about" },
   { title: "Contact us", link: "Contact" },
- 
+  
 ];
 
-export default function Header() {
+export default function Header({darkMode, setDarkMode}) {
   const [isHumbergerOpen, setisHumbergerOpen] = useState(false);
-
   const isLogin = false;
   const navLinks =
     "capitalize S_Underline relative inline-block after:bg-[#db4444] hover:text-[#db4444] hover:after:left-0 after:-bottom-1 w-fit hover:after:w-[100%]";
 
   return (
     <>
-      <div className=" border-b-[1px]">
+      <div className={ ` transition-color duration-300 border-b-[1px] ${darkMode ? "bg-slate-900" : ""}`}>
         <div className="h-24   margin justify-between relative flex max-w-full items-center">
 
         <img src={logo} alt="" />
@@ -39,7 +40,7 @@ export default function Header() {
           <FiSearch className="text-3xl" />
         </div>
 
-        <ul className="hidden md:flex gap-3">
+        <ul className={`transition-color duration-300 hidden md:flex gap-3 ${darkMode ? "text-white" : ""}`}>
           {links.map((item, i) => (
             <li onClick={()=>setisHumbergerOpen(false)} className={navLinks} key={i}>
               <Link to={item.link}>{item.title}</Link>
@@ -74,6 +75,18 @@ export default function Header() {
           </ul>
         )}
         <div className="bg-center text-2xl gap-3">
+          <button onClick={()=>{
+
+setDarkMode(!darkMode)
+
+
+          }} className= {`transition duration-300 ${darkMode ? "text-white" : ""}`}>
+            {darkMode ? 
+            <IoSunnyOutline/>
+            :
+          <BsFillMoonFill />
+          }
+          </button>
           {isLogin ? (
             <>
               <FaRegHeart />

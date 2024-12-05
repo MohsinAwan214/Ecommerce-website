@@ -11,19 +11,20 @@ import Contact from "./pages/Contact"
 import Products from "./pages/Products"
 import Login from "./pages/Login"
 import ProductDatail from "./pages/ProductDatail";
+import { useState } from "react";
 {/* //         <Route path="/Contact" element={<Contact/>} /> */}
 function App() {
 const isLogined = false;  
-
+const [darkMode, setDarkMode] = useState(false);
   return (
     <>
 
 
 
       <Banner/>
-      <Header/>
+      <Header darkMode={darkMode} setDarkMode={setDarkMode}/>
       <Routes>
-        <Route path="/" index element={<Home/>} />
+        <Route path="/" index element={<Home darkMode={darkMode}/>} />
         <Route path="/About" index element={<About/>} />
         <Route path="/products" index element={<Products/>} />
         <Route path="/product/:id" index element={<ProductDatail/>} />

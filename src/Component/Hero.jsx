@@ -4,18 +4,18 @@ import '../index.css'
 
 
 
-export default function Hero() {
+export default function Hero({darkMode}) {
 
 
 
   return (
    <>
-<div className='flex  justify-between'>
+<div className={`transition-color duration-300 flex ${darkMode ? "text-white" : "" }  justify-between`}>
 
 
 <div className='flex gap-11 items-center '>
    <div className=''>
-   <span className='font-semibold bg-center pt-2 text-3xl fontInter tracking-wide'>Flash Sales</span>
+   <span className="font-semibold bg-center pt-2 text-3xl  fontInter tracking-wide ">Flash Sales</span>
    </div>
 
    <div className='flex'>

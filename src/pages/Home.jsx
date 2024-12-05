@@ -15,19 +15,22 @@ import { FaArrowUp } from "react-icons/fa6";
 import Slider from "../Component/Slider";
 import useProduct from "../hooks/useProduct";
 
-export default function Home() {
+export default function Home({darkMode}) {
   const {products} = useProduct("limit=30&skip=80")
+ 
   return (
     <>
+    <div className={` transition-color duration-300 ${darkMode ? "bg-slate-900" : "" }`}>
+
+      <div className="overflow-hidden margin ">
         <div id="top">
-          <Vouchor />
+          <Vouchor darkMode={darkMode}/>
         </div>
-      <div className="overflow-hidden  margin">
 
         <div className="mt-20">
           <Title text="Today’s" className="mb-1" />
           <div className="flex justify-between">
-            <Hero />
+            <Hero darkMode={darkMode}/>
             <Arrow />
           </div>
 
@@ -40,13 +43,13 @@ export default function Home() {
           <Button
             text="View All Products"
             className=" h-14 w-52 text-sm font-medium bg-center mt-7 "
-          />
+            />
         </div>
 
         <div className="mt-20 border-b-[2px] pb-14">
           <Title text="Categories" className="mb-1" />
           <div className="flex justify-between">
-            <h1 className="font-semibold  pt-2 text-3xl  tracking-wide">
+            <h1 className={`${darkMode ? "text-white" : ""}  font-semibold  pt-2 text-3xl  tracking-wide`}>
               Browse By Category
             </h1>
             <Arrow />
@@ -59,18 +62,18 @@ export default function Home() {
         <div className="mt-20">
           <Title text="This Month" className="mb-1 " />
           <div className="flex justify-between">
-            <h1 className="font-semibold  pt-2 text-3xl  tracking-wide">
+            <h1 className={`${darkMode ? "text-white" : ""}  font-semibold  pt-2 text-3xl  tracking-wide`}>
               Best Selling Products
             </h1>
             <Button
               text="View All"
               className="h-11  w-28 text-sm font-medium bg-center"
-            />
+              />
           </div>
 
           <div className="flex gap-7 mt-10 var ">
           {products?.slice(0,4).map((item)=>(
- 
+            
             <Card
             key={item.id}
             Name={item.title} 
@@ -92,14 +95,14 @@ export default function Home() {
         <div className="mt-16">
           <Title text="Our Products" className="mb-1  " />
           <div className="flex justify-between">
-            <h1 className="font-semibold  pt-2 text-3xl  tracking-wide">
+            <h1 className={`${darkMode ? "text-white" : ""}  font-semibold  pt-2 text-3xl  tracking-wide`}>
               Explore Our Products
             </h1>
             <Arrow />
           </div>
           <div className="flex gap-7 mt-10 var">
           {products?.slice(4,8).map((item)=>(
- 
+            
             <Card
             key={item.id}
             id={item.id}
@@ -133,14 +136,14 @@ export default function Home() {
             <Button
               text="View All Products"
               className="mx-auto h-14 w-52 text-sm font-medium bg-center mt-7"
-            />
+              />
           </div>
         </div>
 
         <div className="mt-24 ">
           <div>
             <Title text="Featured" className="mb-1 " />
-            <h1 className="font-semibold  pt-2 text-3xl  tracking-wide">
+            <h1 className={`${darkMode ? "text-white" : ""}  font-semibold  pt-2 text-3xl  tracking-wide`}>
               New Arrival
             </h1>
           </div>
@@ -159,6 +162,7 @@ export default function Home() {
 
         
       </div>
+              </div>
     </>
   );
 }
