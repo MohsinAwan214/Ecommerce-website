@@ -28,8 +28,9 @@ export default function Header({darkMode, setDarkMode}) {
     <>
       <div className={ ` transition-color duration-300 border-b-[1px] ${darkMode ? "bg-slate-900" : ""}`}>
         <div className="h-24   margin justify-between relative flex max-w-full items-center">
-
+<Link to={'/'}>
         <img src={logo} alt="" />
+</Link>
 
         <div className=" bg-[#F5F5F5] rounded w-60 h-10 bg-center px-3 ">
           <input
@@ -40,7 +41,7 @@ export default function Header({darkMode, setDarkMode}) {
           <FiSearch className="text-3xl" />
         </div>
 
-        <ul className={`transition-color duration-300 hidden md:flex gap-3 ${darkMode ? "text-white" : ""}`}>
+        <ul className={`transition-color duration-300 hidden md:flex gap-16 ${darkMode ? "text-white" : ""}`}>
           {links.map((item, i) => (
             <li onClick={()=>setisHumbergerOpen(false)} className={navLinks} key={i}>
               <Link to={item.link}>{item.title}</Link>

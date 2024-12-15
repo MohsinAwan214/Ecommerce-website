@@ -17,6 +17,8 @@
 }
 
 
+
+
 .newarival{
     grid-row: auto;
 }
@@ -25,9 +27,7 @@
     justify-content: center;
     gap: 50px;
 }
-.voucher2{
-display: none;
-}
+
 
 .voucher1{
     display: flex;
@@ -36,11 +36,12 @@ display: none;
    
 }
 .voucher3{
+    
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
 }
 
 }
@@ -66,7 +67,7 @@ display: none;
 .margin{
     margin-right:auto;
     margin-left:auto;
-    max-width: 880px;
+    max-width: 1200px;
     
 }
 .bdr{

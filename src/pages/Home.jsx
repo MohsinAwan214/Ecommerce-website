@@ -20,7 +20,7 @@ export default function Home({darkMode}) {
  
   return (
     <>
-    <div className={` transition-color duration-300 ${darkMode ? "bg-slate-900" : "" }`}>
+    <div className={` transition-color duration-300 ${darkMode ? "bg-slate-900" : "" } `} >
 
       <div className="overflow-hidden margin ">
         <div id="top">
@@ -46,7 +46,7 @@ export default function Home({darkMode}) {
             />
         </div>
 
-        <div className="mt-20 border-b-[2px] pb-14">
+        <div className="mt-20 border-b-[2px] pb-14 ">
           <Title text="Categories" className="mb-1" />
           <div className="flex justify-between">
             <h1 className={`${darkMode ? "text-white" : ""}  font-semibold  pt-2 text-3xl  tracking-wide`}>
@@ -55,7 +55,7 @@ export default function Home({darkMode}) {
             <Arrow />
           </div>
           <div className="mt-10">
-            <Categories />
+            <Categories darkMode={darkMode}/>
           </div>
         </div>
 
@@ -75,6 +75,7 @@ export default function Home({darkMode}) {
           {products?.slice(0,4).map((item)=>(
             
             <Card
+            id={item.id}
             key={item.id}
             Name={item.title} 
             image={item.thumbnail} 
@@ -154,7 +155,7 @@ export default function Home({darkMode}) {
         </div>
 
         <div className="mt-36 flex justify-center">
-          <Delivery />
+          <Delivery darkMode={darkMode}/>
         </div>
         <div className="mb-10 bg-[#F5F5F5] flex float-end h-10 w-10 rounded-full bg-center text-2xl">
           <a id="top" href=""><FaArrowUp/></a>

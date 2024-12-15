@@ -10,12 +10,12 @@ import DeliveryIcon from '../assets/images/icon-delivery.png'
 import IconReturn from '../assets/images/Icon-return.png'
 import useProduct from "../hooks/useProduct";
 export default function ProductDatail() {
-  const {products} = useProduct("limit=30&skip=90")
+  const {products} = useProduct("limit=30&skip=100")
   const params = useParams()
   const { data, error, isLoading } = useSWR(`https://dummyjson.com/products/${params.id}`, axios)
 
-    console.log("pa",params);
-    console.log(data);
+   
+    
     const product = data?.data;
 const [selectImg , setSeleImg] = useState(null)
 const [quantity , setQuantity] = useState(0)
@@ -25,7 +25,8 @@ useEffect(()=>{
   setQuantity(product?.minimumOrderQuantity)
 },[data])
 
-
+if(isLoading) return "Lodling..."
+if(error) return <div>error</div>
   return (
    <main>
 
@@ -135,7 +136,8 @@ useEffect(()=>{
     {products?.slice(0,4).map((item)=>(
 
       <Card
-      key={item.id}
+     id={item.id}
+     key={item.id}
       Name={item.title} 
       image={item.thumbnail} 
       className1="hidden" 

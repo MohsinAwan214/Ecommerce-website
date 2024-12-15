@@ -11,8 +11,8 @@ import { PiCopyrightLight } from "react-icons/pi";
 
 export default function Futter() {
   return (
-    <div className="bg-black text-[#FAFAFA] min-h-[350px] w-full relative  overflow-hidden p-[70px]">
-      <div className=" flex  w-fll justify-between ml-1  flex-wrap">
+    <div className="bg-black text-[#FAFAFA] min-h-[350px] w-full relative overflow-hidden bg-center flex-col">
+      <div className=" flex  w-full justify-betwen ml-1 border flex-wrap margin">
       
         <div className=" h-[132px] flex flex-col gap-3 w-40 ">
           <h1 className="font-bold tracking-wider">Exclusive</h1>
@@ -116,7 +116,7 @@ export default function Futter() {
 
       </div>
       <div
-       className=" bottom-5 left-[350px] absolute flex gap-1 text-[#FFFFFF] ">
+       className=" bottom-5  flex gap-1 text-[#FFFFFF] mt-12">
         <div className="pt-1 opacity-30">
         <PiCopyrightLight/>
         </div>

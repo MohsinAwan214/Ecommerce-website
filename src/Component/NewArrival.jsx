@@ -3,11 +3,13 @@ import amazon from "../assets/images/amazon.png"
 import baji from "../assets/images/baji.png"
 import Gucci from "../assets/images/Gucci.png"
 
+
+
 export default function NewArrival() {
   return (
   <div className="main grid grid-cols-4 gap-7 grid-rows-2 mt-10 newarival">
 
-<div className="bg-[#0D0D0D] rounded col-span-2 row-span-2 relative bg-center group ">
+<div className="bg-[#0D0D0D] rounded col-span-2 row-span-2 relative bg-center group overflow-hidden ">
   <img src={ps5} alt="" className="w-full group-hover:scale-110 duration-300" />
   <div className="absolute w-56 gap-3 bottom-5 left-5 flex-col flex">
     <h1 className="S_Underline relative inline-block after:bg-white group-hover:after:left-0 after:-bottom-1 w-fit group-hover:after:w-[100%] font-semibold text-[#FAFAFA] text-2xl ">PlayStation 5</h1>
