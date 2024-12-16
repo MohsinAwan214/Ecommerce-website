@@ -77,7 +77,7 @@ export default function vouchor({ darkMode }) {
               <FaArrowRight />
             </div>
           </div>
-          <div className=" bg-center  w-[400px] border">
+          <div className=" bg-center h-full w-[400px] border">
             <img src={MobileImg} className="" alt="" />
           </div>
         </div>
