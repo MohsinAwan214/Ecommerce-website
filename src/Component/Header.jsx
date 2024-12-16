@@ -10,23 +10,28 @@ import { Link } from "react-router-dom";
 import  "../index.css"
 import { IoSunnyOutline } from "react-icons/io5";
 import { BsFillMoonFill } from "react-icons/bs";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleDarkMode } from "../store/darkModeSlice";
 
 const links = [
   { title: "Home", link: "/" },
   { title: "About", link: "about" },
   { title: "Contact us", link: "Contact" },
+ 
   
 ];
 
-export default function Header({darkMode, setDarkMode}) {
+export default function Header() {
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+  const dispatch = useDispatch();
   const [isHumbergerOpen, setisHumbergerOpen] = useState(false);
-  const isLogin = false;
+  const isLogin = true;
   const navLinks =
     "capitalize S_Underline relative inline-block after:bg-[#db4444] hover:text-[#db4444] hover:after:left-0 after:-bottom-1 w-fit hover:after:w-[100%]";
 
   return (
     <>
-      <div className={ ` transition-color duration-300 border-b-[1px] ${darkMode ? "bg-slate-900" : ""}`}>
+      <div className={ ` transition-color duration-300 border-b-[1px] ${darkMode ? "bg-slate-900 text-white" : ""}`}>
         <div className="h-24   margin justify-between relative flex max-w-full items-center">
 <Link to={'/'}>
         <img src={logo} alt="" />
@@ -78,7 +83,7 @@ export default function Header({darkMode, setDarkMode}) {
         <div className="bg-center text-2xl gap-3">
           <button onClick={()=>{
 
-setDarkMode(!darkMode)
+dispatch(toggleDarkMode())
 
 
           }} className= {`transition duration-300 ${darkMode ? "text-white" : ""}`}>
@@ -91,7 +96,10 @@ setDarkMode(!darkMode)
           {isLogin ? (
             <>
               <FaRegHeart />
+              <Link to={'/AddToCart'}>
               <GrCart />
+              </Link>
+              
             </>
           ) : null}
 

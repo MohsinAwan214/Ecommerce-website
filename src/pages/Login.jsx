@@ -1,19 +1,38 @@
+import axios from "axios"
+import { useSelector } from "react-redux";
 
 
 export default function Login() {
-const formSumithua = (event)=>{
-  event.preventDefault()
+    const darkMode = useSelector((state) => state.darkMode.darkMode);
+const formSumithua =async (event)=>{
+ try {
+    event.preventDefault()
 
-  const formData = new FormData(event.target)
-  const email = formData.get('email')
-  const password = formData.get('password')
-  console.log('email' , email);
-  console.log('password' , password);
+    const formData = new FormData(event.target)
+    const email = formData.get('email')
+  
+//     const response =await axios.post('https://dummyjson.com/auth/login',{
+//       username:'Mohsin',
+//       password:'Mohsin',
+
+//     },
+// {   withCredentials:true   }
+// )
+    console.log('response=>', response);
+    
+    const password = formData.get('password')
+    console.log('email' , email);
+    console.log('password' , password);
+ } catch (error) {
+    console.log('error', error);
+    
+ }
   
 }
 
   return (
-    <section className="bg-gray-50 dark:bg-gray-900">
+
+    <section className={`bg-gray-50 dark:bg-gray-900 ${darkMode ? 'bg-slate-900' :""}  duration-300`}>
  <div
   class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         {/* <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">

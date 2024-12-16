@@ -26,14 +26,14 @@ useEffect(()=>{
 },[data])
 
 if(isLoading) return "Lodling..."
-if(error) return <div>error</div>
+if(error) return <div className='h-screen w-full bg-center'>{JSON.stringify( error?.response.data?.message)}</div>
   return (
-   <main>
+   <main className='margin flex flex-col gap-7'>
 
-<nav>
-  <span>Account</span>
+<nav className='text-[14px] flex  gap-5'> 
+  <span className=' opacity-50'>Account</span>
  /
- <span>Gaming</span>
+ <span className=' opacity-50'>Gaming</span>
 /
 <span>Havic HV G-92 Gamepad</span>
 </nav>

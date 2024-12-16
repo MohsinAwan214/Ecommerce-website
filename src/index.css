@@ -7,6 +7,32 @@
     justify-content: center;
     align-items: center;
 }
+    @media only screen and (max-width: 896px){
+        .voucher1{
+            flex-wrap: wrap;
+            display: flex; 
+        }
+        
+        
+        
+        
+    }
+    @media only screen and (max-width: 708px){
+        .voucher2{
+            height: 200px;
+        }
+        .apple{
+            height:30px;
+            width:30px;
+        }
+        .iphone{
+    font-size: 7px;
+        }
+        
+        .heading-2{
+           font-size: 29px;  
+        }
+    }
 
 @media only screen and (max-width: 733px){
 
@@ -33,7 +59,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    flex-wrap: wrap;
+    
+    
+}
+.voucher2{
+padding: 50px;
+
 }
 .voucher3{
     
@@ -84,10 +116,6 @@
    
 }
 
-.del{
-    color:#000000;
-    opacity: 50%;
-}
 .discount{
     color: #FAFAFA;
     background-color: #DB4444;
@@ -104,9 +132,5 @@
     background-color: whitesmoke;
     
 }
-.lead{
-    color: #000000;
-    opacity: 50%;
-    
-}
+
 

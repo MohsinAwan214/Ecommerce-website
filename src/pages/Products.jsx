@@ -3,9 +3,11 @@ import { useState } from "react";
 import Card from "../Component/Card";
 import useProduct from "../hooks/useProduct";
 import '../index.css'
+import { useSelector } from "react-redux";
 
 export default function Products(props) {
-  
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
  const {products} = useProduct('limit=30&skip=0')
 const [searchterm, setSearchTerm] = useState("")
 
@@ -24,7 +26,7 @@ return (
   <>
   
 
-<div className="flex flex-wrap margin bg-center">
+<div className={`flex flex-wrap  bg-center transition-colors duration-300 ${darkMode ? "bg-slate-900" : "" }`}>
 
 
 <input type="search" name="price" id="price"

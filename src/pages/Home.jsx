@@ -14,8 +14,11 @@ import Delivery from "../Component/Delivery";
 import { FaArrowUp } from "react-icons/fa6";
 import Slider from "../Component/Slider";
 import useProduct from "../hooks/useProduct";
+import { useSelector } from "react-redux";
 
-export default function Home({darkMode}) {
+export default function Home() {
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   const {products} = useProduct("limit=30&skip=80")
  
   return (
@@ -71,7 +74,7 @@ export default function Home({darkMode}) {
               />
           </div>
 
-          <div className="flex gap-7 mt-10 var ">
+          <div className="flex gap-10  mt-10 var ">
           {products?.slice(0,4).map((item)=>(
             
             <Card
@@ -101,7 +104,7 @@ export default function Home({darkMode}) {
             </h1>
             <Arrow />
           </div>
-          <div className="flex gap-7 mt-10 var">
+          <div className="flex gap-10 mt-10 var">
           {products?.slice(4,8).map((item)=>(
             
             <Card
@@ -117,7 +120,7 @@ export default function Home({darkMode}) {
             />
           ))}
           </div>
-          <div className="flex gap-7 mt-10 var ">
+          <div className="flex gap-10 mt-10 var ">
           {products?.slice(8,12).map((item)=>(
  
             <Card
@@ -125,7 +128,7 @@ export default function Home({darkMode}) {
             id={item.id}
             Name={item.title} 
             image={item.thumbnail} 
-            className1="hidden" 
+            className2={"text-white"} 
             discountPercentage={item.discountPercentage}
             price={item.price} 
             rating={item.rating}

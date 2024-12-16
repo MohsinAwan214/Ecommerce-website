@@ -11,15 +11,15 @@ import { PiCopyrightLight } from "react-icons/pi";
 
 export default function Futter() {
   return (
-    <div className="bg-black text-[#FAFAFA] min-h-[350px] w-full relative overflow-hidden bg-center flex-col">
-      <div className=" flex  w-full justify-betwen ml-1 border flex-wrap margin">
+    <div className="bg-black text-[#FAFAFA] min-h-[440px] gap-14 w-full relative overflow-hidden bg-center flex-col">
+      <div className=" flex  w-full  ml-1  min-h-[200px] flex-wrap margin justify-between p-10">
       
         <div className=" h-[132px] flex flex-col gap-3 w-40 ">
-          <h1 className="font-bold tracking-wider">Exclusive</h1>
-          <span className="text-[12px] tracking-wider font-medium">
+          <h1 className="font-bold tracking-wider text-[20px]">Exclusive</h1>
+          <span className=" tracking-wider font-medium">
             Subscribe
           </span>
-          <p className="text-[10px] tracking-wider">
+          <p className="text-[10px]  tracking-wider">
             Get 10% off your first order
           </p>
 
@@ -37,10 +37,10 @@ export default function Futter() {
 
         {/* 2 */}
 
-        <div className=" h-[132px] flex flex-col gap-3 w-36 ">
-          <h1 className="font-semibold tracking-wider ">Support</h1>
-          <div className="h-[110px]  text-[12px] gap-2 flex flex-col">
-            <span className="tracking-wider ">
+        <div className=" h-[132px] flex flex-col gap-4 w-36 ">
+          <h1 className="font-bold text-[20px] tracking-wider ">Support</h1>
+          <div className="h-[110px]  text-[12px] gap-3 flex flex-col">
+            <span className="tracking-wider">
               111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.
             </span>
             <p className="text-[13px] tracking-wider ">exclusive@gmail.com</p>
@@ -50,9 +50,9 @@ export default function Futter() {
 
         {/* 3 */}
 
-        <div className=" h-[158px] flex flex-col gap-3 w-26  ">
-          <h1 className="font-bold tracking-wider">Account</h1>
-          <div className="flex flex-col gap-2 text-[12px]">
+        <div className=" h-[158px] flex flex-col gap-4 w-26  ">
+          <h1 className="font-bold text-[20px] tracking-wider">Account</h1>
+          <div className="flex flex-col gap-4 text-[12px]">
             <span className=" tracking-wider font-medium">My Account</span>
             <span className=" tracking-wider">Login / Register</span>
             <span className=" tracking-wider">Cart</span>
@@ -63,18 +63,21 @@ export default function Futter() {
 
         {/* 4 */}
 
-        <div className=" h-[136px] flex flex-col gap-2 w-26  ">
-          <h1 className="font-bold tracking-wider">Quick Link</h1>
+        <div className=" h-[136px] flex flex-col gap-4 w-26  ">
+          <h1 className="font-bold text-[20px] tracking-wider">Quick Link</h1>
+          <div className="flex flex-col gap-4 text-[12px]">
+
           <span className="text-[12px] tracking-wider font-medium">
             Privacy Policy
           </span>
-          <span className="text-[10px] tracking-wider">Terms Of Use</span>
-          <span className="text-[10px] tracking-wider">FAQ</span>
-          <span className="text-[10px] tracking-wider">Contact</span>
+          <span className=" tracking-wider">Terms Of Use</span>
+          <span className=" tracking-wider">FAQ</span>
+          <span className=" tracking-wider">Contact</span>
         </div>
+          </div>
 
         <div className=" h-[180px] flex flex-col gap-2 w-26 ">
-          <h1 className="font-bold tracking-wider">Download App</h1>
+          <h1 className="font-bold tracking-wider text-[20px]">Download App</h1>
           <span className="text-[9px] tracking-wider font-medium text-[#FAFAFA] opacity-70">
             Save $3 with App New User Only
           </span>
@@ -83,7 +86,7 @@ export default function Futter() {
             
             
           
-            <img src={QrCode} alt="qr code img" className="h-[54px] mt-[5px]"/>
+            <img src={QrCode} alt="qr code img" className="h-[60px] "/>
           
             <div className=" ">
               <div className="">
@@ -116,7 +119,7 @@ export default function Futter() {
 
       </div>
       <div
-       className=" bottom-5  flex gap-1 text-[#FFFFFF] mt-12">
+       className=" bottom-5  flex gap-1 text-[#FFFFFF] mt-12 border-t pt-5 h-11 w-full justify-center items-center">
         <div className="pt-1 opacity-30">
         <PiCopyrightLight/>
         </div>
