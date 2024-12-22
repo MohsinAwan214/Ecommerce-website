@@ -5,7 +5,7 @@ export default function Arrow(props) {
   
 
    
-    <div className='gap-3 flex items-center  text-3xl'>
+    <div className='gap-3 flex items-center  text-3xl max-ml:hidden'>
 
  <MdOutlineArrowBack className='rounded-full bg-[#F5F5F5] text-[30px] '/>
  <MdOutlineArrowForward className='rounded-full bg-[#F5F5F5] text-[30px] '/>

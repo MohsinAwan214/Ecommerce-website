@@ -1,9 +1,12 @@
 import { FaTruckFast } from "react-icons/fa6";
 import { SlEarphonesAlt } from "react-icons/sl";
 import { MdOutlineVerifiedUser } from "react-icons/md";
-export default function Delivery({darkMode}) {
+import { useSelector } from "react-redux";
+export default function Delivery() {
+    const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   return (
-    <div className='flex  justify-between mb-28 bdr w-[943px] delievery'>
+    <div className='flex  justify-between mb-28  w-[943px] delievery'>
         <div className='h-[191px] w-60 bg-center flex-col'>
             <div className='h-14 w-14 border-[8px] border-[#2F2E30] border-opacity-40  rounded-full bg-center'>
             <div className='h-10 w-10 text-2xl bg-black  text-white bg-center rounded-full'>

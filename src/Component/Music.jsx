@@ -1,5 +1,5 @@
 
-import Radio from "../assets/images/Radio.png"
+import Radio from "../assets/images/Frame 694.png"
 
 
 export default function Music() {
@@ -35,7 +35,7 @@ export default function Music() {
  </div>
   
 </div>
-<div className="text-white w-full bg-center ">
+<div className="text-white h-full   w-full bg-center ">
   <img src={Radio} alt="" />
 </div>
     </div>
