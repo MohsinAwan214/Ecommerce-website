@@ -64,17 +64,17 @@ export default function Home() {
 
         <div className="mt-20">
           <Title text="This Month" className="mb-1 " />
-          <div className="flex justify-between">
-            <h1 className={`${darkMode ? "text-white" : ""}  font-semibold  pt-2 text-3xl  tracking-wide`}>
+          <div className="flex justify-between bdr">
+            <h1 className={`${darkMode ? "text-white" : ""} max-xs:text-[20px] font-semibold  pt-2 text-3xl  tracking-wide`}>
               Best Selling Products
             </h1>
             <Button
               text="View All"
-              className="h-11  w-28 text-sm font-medium bg-center"
+              className="h-11 max-xs:h-7 max-xs:w-20 w-28 text-sm font-medium bg-center"
               />
           </div>
 
-          <div className="flex gap-10  mt-10 var ">
+          <div className="flex max-mm:gap-2 max-xs:gap-2  gap-10 mt-10 var">
           {products?.slice(0,4).map((item)=>(
             
             <Card
@@ -104,7 +104,7 @@ export default function Home() {
             </h1>
             <Arrow />
           </div>
-          <div className="flex gap-10 mt-10 var">
+          <div className="flex max-mm:gap-2 gap-10 mt-10 var">
           {products?.slice(4,8).map((item)=>(
             
             <Card
@@ -120,7 +120,7 @@ export default function Home() {
             />
           ))}
           </div>
-          <div className="flex gap-10 mt-10 var ">
+          <div className="flex gap-10 max-mm:gap-2 mt-10 var ">
           {products?.slice(8,12).map((item)=>(
  
             <Card
