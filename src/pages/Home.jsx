@@ -50,9 +50,9 @@ export default function Home() {
         </div>
 
         <div className="mt-20 border-b-[2px] pb-14 ">
-          <Title text="Categories" className="mb-1" />
+          <Title text="Categories" className="mb-1 max-xs:text-[14px]" />
           <div className="flex justify-between">
-            <h1 className={`${darkMode ? "text-white" : ""}  font-semibold  pt-2 text-3xl  tracking-wide`}>
+            <h1 className={`${darkMode ? "text-white" : ""} max-xs:text-[20px] font-semibold  pt-2 text-3xl  tracking-wide`}>
               Browse By Category
             </h1>
             <Arrow />
@@ -63,8 +63,8 @@ export default function Home() {
         </div>
 
         <div className="mt-20">
-          <Title text="This Month" className="mb-1 " />
-          <div className="flex justify-between bdr">
+          <Title text="This Month" className="mb-1 max-xs:text-[14px]" />
+          <div className="flex justify-between ">
             <h1 className={`${darkMode ? "text-white" : ""} max-xs:text-[20px] font-semibold  pt-2 text-3xl  tracking-wide`}>
               Best Selling Products
             </h1>
@@ -97,9 +97,9 @@ export default function Home() {
         </div>
 
         <div className="mt-16">
-          <Title text="Our Products" className="mb-1  " />
+          <Title text="Our Products" className="mb-1 max-xs:text-[14px] " />
           <div className="flex justify-between">
-            <h1 className={`${darkMode ? "text-white" : ""}  font-semibold  pt-2 text-3xl  tracking-wide`}>
+            <h1 className={`${darkMode ? "text-white" : ""} max-xs:text-[20px]  font-semibold  pt-2 text-3xl  tracking-wide`}>
               Explore Our Products
             </h1>
             <Arrow />
@@ -146,8 +146,8 @@ export default function Home() {
 
         <div className="mt-24 ">
           <div>
-            <Title text="Featured" className="mb-1 " />
-            <h1 className={`${darkMode ? "text-white" : ""}  font-semibold  pt-2 text-3xl  tracking-wide`}>
+            <Title text="Featured" className="mb-1 max-xs:text-[14px]" />
+            <h1 className={`${darkMode ? "text-white" : ""} max-xs:text-[20px] font-semibold  pt-2 text-3xl  tracking-wide`}>
               New Arrival
             </h1>
           </div>

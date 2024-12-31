@@ -32,16 +32,16 @@ export default function Header() {
   return (
     <>
       <div className={ ` transition-color duration-300 border-b-[1px]  ${darkMode ? "bg-slate-900 text-white" : ""}`}>
-        <div className="h-24   margin justify-between relative flex max-w-full items-center max-mm:gap-2">
+        <div className="h-24   margin justify-between relative flex max-w-full items-center max-mm:gap-2 max-ml:gap-2">
 <Link to={'/'} className="max-xs:w-8 max-xs:h-8 max-mm:w-7 max-mm:h-7">
         <img src={logo} alt="" />
 </Link>
 
-        <div className=" bg-[#F5F5F5] rounded w-60 h-10  bg-center  max-mm:w-40 max-mm:px-1  max-mm:h-7 px-3 max-xs:w-32 max-xs:h-8">
+        <div className=" bg-[#F5F5F5] max-ml:h-8 max-ml:w-48  rounded w-60 h-10  bg-center  max-mm:w-40 max-mm:px-1  max-mm:h-7 px-3 max-xs:w-32 max-xs:h-8">
           <input
           
             type="search"
-            className="bg-transparent w-full outline-none text-sm max-mm:text-[8px] max-xs:text-[7px]  "
+            className="bg-transparent   w-full outline-none text-sm max-mm:text-[8px] max-ml:text-[10px] max-xs:text-[7px]  "
             placeholder="What are you looking for?"
             />
           <FiSearch className="text-3xl max-xs:text-2xl max-mm:text-2xl" />
@@ -81,7 +81,7 @@ export default function Header() {
             ) : null}
           </ul>
         )}
-        <div className="bg-center text-2xl gap-6  max-xs:gap-3  max-xs:text-[20px] max-mm:text-[20px] max-mm:gap-3">
+        <div className="bg-center text-2xl gap-6 max-ml:gap-3  max-xs:gap-3  max-xs:text-[20px] max-mm:text-[20px] max-mm:gap-3">
           <button onClick={()=>{
 
 dispatch(toggleDarkMode())
