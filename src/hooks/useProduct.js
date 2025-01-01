@@ -1,15 +1,15 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react'
+import { api_key } from '../productApi/index';
 
 export default function useProduct(query) {
-    // const  api_Product = `https://dummyjson.com/products?${query}`
+    
 
-
-    const  api_Product = `http://localhost:3000/product`
+   
 const [products, setProducts] = useState(null)
 
 const getProductData = async ()=>{
-const response = await axios(api_Product)
+const response = await axios(`${api_key}/product`)
 setProducts(response?.data?.products)
 
 };
